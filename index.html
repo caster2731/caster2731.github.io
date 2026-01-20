@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caster's Portfolio</title>
+    <meta name="description" content="Portfolio of Caster - Developer & Creator">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav class="glass-panel">
+                <div class="logo">CASTER</div>
+                <div class="social-links">
+                    <a href="https://github.com/caster2731" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="fade-in">Hi, I'm <span class="gradient-text">Caster</span>.</h1>
+                    <p class="subtitle fade-in delay-1">Developer / Creator</p>
+                    <p class="description fade-in delay-2">
+                        面白いものをコードで作り出す。<br>
+                        AI、自動化、そして新しい体験を。
+                    </p>
+                </div>
+            </section>
+
+            <section class="projects">
+                <h2 class="section-title fade-in delay-3">Projects</h2>
+                <div class="featured-project glass-panel fade-in delay-4">
+                    <div class="project-header">
+                        <div class="card-icon"><i class="fas fa-radio"></i></div>
+                        <h3>Kenmo FM</h3>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-highlight">
+                            KenmoFMは、最新のAI技術とインターネット文化を融合させた、24時間365日稼働の自動ラジオ放送システムです。<br>
+                            5ちゃんねる（嫌儲板）の熱気あるスレッドから、古今の名作文学、そしてAIによる鋭いニュース解説まで、多彩なコンテンツを全自動でキュレーション・生成し、リスナーに届けます。
+                        </p>
+
+                        <div class="project-details">
+                            <h4>Concept</h4>
+                            <p>
+                                <strong>「インターネットの喧騒を、心地よいラジオへ」</strong><br>
+                                KenmoFMは、テキストベースのインターネット上の議論や情報を、聴覚的なエンターテインメントへと昇華させます。<br>
+                                Google Cloud TTS、Voicevox、Bert-VITS2などの高度な音声合成技術を駆使し、単なる読み上げを超えた「ラジオ番組」としての体験を提供します。
+                            </p>
+
+                            <h4>Key Features</h4>
+                            <ul class="feature-list">
+                                <li>
+                                    <i class="fas fa-comments"></i>
+                                    <div>
+                                        <strong>全自動スレッド読み上げ & ラジオ化</strong><br>
+                                        5ちゃんねる（嫌儲板）の勢いのあるスレッドをリアルタイムで取得。高性能フィルタリングと、時間帯に合わせたBGM/SE演出でプロのラジオのような聞き心地を実現。<br>
+                                        <small>定時の時報やジングル、そして「嫌儲十訓」の定期放送も。</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-newspaper"></i>
+                                    <div>
+                                        <strong>AIニュース解説・コメンタリー</strong><br>
+                                        Gemini API / NotebookLMを活用し、最新ニュースをAIが独自の視点で解説。AI
+                                        Duoモードによるキャラクター同時の掛け合いで、深みのある議論を展開します。
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-book-open"></i>
+                                    <div>
+                                        <strong>多彩な専門コーナー</strong><br>
+                                        深夜の「怪談コーナー」、情感豊かな「文学コーナー」、そしてAI DJが盛り上げる音楽放送「Musicthon」。
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-podcast"></i>
+                                    <div>
+                                        <strong>ポッドキャスト自動配信</strong><br>
+                                        放送されたコンテンツの一部は自動的にパッケージ化され、Apple PodcastsやSpotifyへ配信されます。
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <h4>Technical Highlights</h4>
+                            <ul class="feature-list">
+                                <li><strong>Multi-TTS Engine:</strong> Google Cloud TTS (Chirp3, Neural2), Voicevox,
+                                    Bert-VITS2 (実験的モデル)</li>
+                                <li><strong>Automated Mixing:</strong> FFmpegとPygameを駆使したリアルタイムかつ高品質な音声ミキシング</li>
+                                <li><strong>Expandability:</strong> 新しいコーナーを柔軟に追加できるプラグイン的アーキテクチャ</li>
+                            </ul>
+
+                            <h4>Vision</h4>
+                            <p>
+                                インターネットの「今」を切り取り、AIの力で再構築する。<br>
+                                KenmoFMは、作業用BGMとして、あるいは情報収集ツールとして、リスナーの生活に寄り添う新しいメディアの形を提案します。
+                            </p>
+
+                            <h4>On Air & Archives</h4>
+                            <div class="project-links">
+                                <a href="https://kenmofm.duckdns.org" target="_blank" class="link-btn homepage">
+                                    <i class="fas fa-globe"></i> Official HP
+                                </a>
+                                <a href="https://www.youtube.com/@kenmofm2" target="_blank" class="link-btn youtube">
+                                    <i class="fab fa-youtube"></i> YouTube
+                                </a>
+                                <a href="https://podcasts.apple.com/us/podcast/kenmofm-podcast/id1869841487"
+                                    target="_blank" class="link-btn apple">
+                                    <i class="fas fa-podcast"></i> Apple Podcasts
+                                </a>
+                                <a href="https://open.spotify.com/episode/10TkLF1xGhsRpSSIOzo4Ea?si=RnOPLHmjTIaVdzQSEnJ_NA"
+                                    target="_blank" class="link-btn spotify">
+                                    <i class="fab fa-spotify"></i> Spotify
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tags big-tags">
+                            <span>Python</span>
+                            <span>Gemini API</span>
+                            <span>NotebookLM</span>
+                            <span>Voicevox</span>
+                            <span>Google Cloud TTS</span>
+                            <span>Bert-VITS2</span>
+                            <span>FFmpeg</span>
+                            <span>Icecast</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Caster. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
