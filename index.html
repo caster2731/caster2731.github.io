@@ -143,13 +143,176 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Other Projects Grid -->
+                <h3 class="other-projects-title fade-in delay-4">Other Projects</h3>
+                <div class="projects-grid fade-in delay-4">
+                    <!-- Nginx Access Log Analyzer Card -->
+                    <div class="project-card glass-panel" onclick="openModal('nginx-modal')">
+                        <div class="project-card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Server Log Cockpit</h4>
+                        <p>アクセスログを解析し、美しいダッシュボードで視覚化</p>
+                        <div class="project-card-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+
+                    <!-- Gravity Storage Card -->
+                    <div class="project-card glass-panel" onclick="openModal('gravity-modal')">
+                        <div class="project-card-icon"><i class="fas fa-globe"></i></div>
+                        <h4>Gravity Storage 🪐</h4>
+                        <p>フォルダ構成を太陽系に見立てた3Dビジュアライザー</p>
+                        <div class="project-card-tags">
+                            <span>React</span>
+                            <span>Three.js</span>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <!-- Nginx Modal -->
+        <div id="nginx-modal" class="modal-overlay" onclick="closeModal(event, 'nginx-modal')">
+            <div class="modal-content glass-panel" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal(event, 'nginx-modal')"><i
+                        class="fas fa-times"></i></button>
+                <div class="project-header">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Server Log Cockpit</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-highlight">
+                        Nginxのアクセスログ（標準 Combined 形式）を解析し、美しいダッシュボードで視覚化するWebアプリケーションです。<br>
+                        PV・UU・転送量・エラー率を一目で確認でき、サーバー管理者やWeb開発者の強力な分析ツールとなります。
+                    </p>
+                    <div class="project-details">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-tachometer-alt"></i>
+                                <div><strong>ダッシュボード</strong><br>PV, UU, 転送量, エラー率を一目で確認。チャートで可視化。</div>
+                            </li>
+                            <li><i class="fas fa-list-alt"></i>
+                                <div><strong>詳細リスト</strong><br>Top Clients（DNS逆引き＆国旗表示）、Top Requests、User
+                                    Agents、Referers</div>
+                            </li>
+                            <li><i class="fas fa-robot"></i>
+                                <div><strong>ボットフィルター</strong><br>クローラーを除外して純粋なユーザーアクセスのみを分析</div>
+                            </li>
+                            <li><i class="fas fa-satellite-dish"></i>
+                                <div><strong>ライブモニター</strong><br>リアルタイムで「tail -f」のように監視</div>
+                            </li>
+                        </ul>
+                        <h4>Additional Features</h4>
+                        <ul class="feature-list">
+                            <li><strong>🇯🇵 日本語対応:</strong> 日英切り替え可能</li>
+                            <li><strong>📂 ファイルブラウザ:</strong> GUIでログファイル選択</li>
+                            <li><strong>💎 モダンUI:</strong> ダークモード＆Glassmorphism</li>
+                        </ul>
+                        <h4>Repository</h4>
+                        <div class="project-links">
+                            <a href="https://github.com/caster2731/Server-log-cockpit" target="_blank"
+                                class="link-btn github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tags big-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                        <span>CSS3</span>
+                        <span>Nginx</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gravity Storage Modal -->
+        <div id="gravity-modal" class="modal-overlay" onclick="closeModal(event, 'gravity-modal')">
+            <div class="modal-content glass-panel" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal(event, 'gravity-modal')"><i
+                        class="fas fa-times"></i></button>
+                <div class="project-header">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Gravity Storage 🪐</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-highlight">
+                        PC内のフォルダ構成を「太陽系」に見立てて3D視覚化するアプリケーションです。<br>
+                        フォルダは恒星（太陽）、ファイルは惑星として表現され、その「重力（サイズ）」を感じながら探索できます。
+                    </p>
+                    <div class="project-details">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-meteor"></i>
+                                <div><strong>惑星メタファー</strong><br>ファイルの種類ごとに異なる惑星として表示（木星=動画、地球=画像など）</div>
+                            </li>
+                            <li><i class="fas fa-weight-hanging"></i>
+                                <div><strong>サイズと重力</strong><br>ファイルサイズが大きいほど惑星も巨大に描画</div>
+                            </li>
+                            <li><i class="fas fa-hand-pointer"></i>
+                                <div><strong>3D探索</strong><br>マウス操作で回転・ズーム、フォルダクリックでドリルダウン</div>
+                            </li>
+                        </ul>
+                        <h4>技術スタック</h4>
+                        <ul class="feature-list">
+                            <li><strong>Frontend:</strong> React (TypeScript), Vite</li>
+                            <li><strong>3D Library:</strong> Three.js, React Three Fiber</li>
+                            <li><strong>Backend:</strong> Python (FastAPI)</li>
+                        </ul>
+                        <h4>Repository</h4>
+                        <div class="project-links">
+                            <a href="https://github.com/caster2731/Gravity-Storage" target="_blank"
+                                class="link-btn github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tags big-tags">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Three.js</span>
+                        <span>React Three Fiber</span>
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Vite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <p>&copy; 2026 Caster. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event, modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
