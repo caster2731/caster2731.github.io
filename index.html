@@ -173,6 +173,20 @@
                         </div>
                         <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
                     </div>
+
+                    <!-- IP Scanner v2 Card -->
+                    <div class="project-card glass-panel" onclick="openModal('ipscanner-modal')">
+                        <div class="project-card-icon"><i class="fas fa-network-wired"></i></div>
+                        <h4>IP Scanner v2</h4>
+                        <p>高速で動作する非同期Webサービスクローラーおよび簡易脆弱性診断ツール</p>
+                        <div class="project-card-tags">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>aiohttp</span>
+                            <span>Playwright</span>
+                        </div>
+                        <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -283,6 +297,78 @@
                         <span>Python</span>
                         <span>FastAPI</span>
                         <span>Vite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IP Scanner v2 Modal -->
+        <div id="ipscanner-modal" class="modal-overlay" onclick="closeModal(event, 'ipscanner-modal')">
+            <div class="modal-content glass-panel" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal(event, 'ipscanner-modal')"><i
+                        class="fas fa-times"></i></button>
+                <div class="project-header">
+                    <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>IP Scanner v2</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-highlight">
+                        IP Scanner v2 は、高速で動作する非同期Webサービスクローラーおよび簡易脆弱性診断ツールです。<br>
+                        指定したIPアドレスやランダムなIPアドレスに対してスキャンを実行し、発見したWebサーバーの情報（タイトル、ヘッダー、SSL証明書の有効期限など）を収集し、リアルタイムでダッシュボードに表示します。
+                    </p>
+
+
+
+                    <div class="project-details">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-rocket"></i>
+                                <div><strong>高速な非同期スキャン</strong><br>aiohttp を活用した並行処理により、高速なネットワークスキャンを実現。</div>
+                            </li>
+                            <li><i class="fas fa-bullseye"></i>
+                                <div><strong>2つのスキャンモード</strong><br>
+                                    ・指定IPスキャン (Target Scan): 特定のIPアドレス、CIDR、またはドメイン名を指定してスキャン。<br>
+                                    ・ランダムIPスキャン (Random Scan): インターネット上のIPアドレスをランダムに生成して探索。
+                                </div>
+                            </li>
+                            <li><i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>詳細なサービス情報収集</strong><br>ステータスコード、ページタイトル、サーバーヘッダ情報、SSL/TLS証明書情報（発行者、ドメイン、有効期限）、逆引きDNSによるホスト名解決、IPアドレスから国籍情報を取得。
+                                </div>
+                            </li>
+                            <li><i class="fas fa-camera"></i>
+                                <div><strong>自動スクリーンショット機能</strong><br>Playwright を使用して、発見したWebページのスクリーンショットを自動的に撮影・保存。
+                                </div>
+                            </li>
+                            <li><i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <strong>簡易脆弱性スクリーニング</strong><br>重大なセキュリティヘッダの欠落チェック、管理パネルや機密ファイルの露出スキャン、古いSSL証明書や自己署名証明書の検出、ディレクトリリスティング等の設定ミスチェック。
+                                </div>
+                            </li>
+                            <li><i class="fas fa-desktop"></i>
+                                <div>
+                                    <strong>リアルタイム・ダッシュボード</strong><br>WebSocketを利用し、スキャン進行状況や発見されたサービスをブラウザ上のモダンなUIでリアルタイムに確認可能。
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h4>技術スタック</h4>
+                        <ul class="feature-list">
+                            <li><strong>Backend:</strong> Python 3.x, FastAPI, aiohttp, SQLite (aiosqlite)</li>
+                            <li><strong>Frontend:</strong> HTML5, Vanilla CSS, Vanilla JavaScript, WebSocket</li>
+                            <li><strong>Automation:</strong> Playwright (スクリーンショット取得用)</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="tags big-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>aiohttp</span>
+                        <span>aiosqlite</span>
+                        <span>WebSocket</span>
+                        <span>Playwright</span>
+                        <span>Vanilla CSS/JS</span>
                     </div>
                 </div>
             </div>
