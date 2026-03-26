@@ -187,6 +187,19 @@
                         </div>
                         <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
                     </div>
+
+                    <!-- 石油備蓄枯渇タイマー Card -->
+                    <div class="project-card glass-panel" onclick="openModal('timer-modal')">
+                        <div class="project-card-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <h4>石油備蓄枯渇タイマー</h4>
+                        <p>日本の石油備蓄が枯渇するまでをリアルタイムでカウントダウンするシミュレーター</p>
+                        <div class="project-card-tags">
+                            <span>Next.js</span>
+                            <span>Flask</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -369,6 +382,72 @@
                         <span>WebSocket</span>
                         <span>Playwright</span>
                         <span>Vanilla CSS/JS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 石油備蓄枯渇タイマー Modal -->
+        <div id="timer-modal" class="modal-overlay" onclick="closeModal(event, 'timer-modal')">
+            <div class="modal-content glass-panel" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal(event, 'timer-modal')"><i
+                        class="fas fa-times"></i></button>
+                <div class="project-header">
+                    <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3>石油備蓄枯渇タイマー ⏱</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-highlight">
+                        日本の石油備蓄があと何日で枯渇するか、リアルタイムでカウントダウン表示するシミュレーション型ダッシュボードです。<br>
+                        資源エネルギー庁の公式統計データ（254日分の備蓄）を基準に、複数のシナリオでの枯渇時期を算出。SFチックなUI演出と、原油価格・関連ニュースのリアルタイム連携が特徴です。
+                    </p>
+                    <div class="project-details">
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-clock"></i>
+                                <div><strong>リアルタイムカウントダウン</strong><br>1秒間隔で日・時・分・秒を刻み、石油備蓄の枯渇までの残り時間を視覚化。残り日数に応じて「ケンモくん」の表情が6段階に変化する演出付き。</div>
+                            </li>
+                            <li><i class="fas fa-sliders-h"></i>
+                                <div><strong>3つのシナリオ切り替え</strong><br>
+                                    ・完全輸入停止 (drainRate: 1.0): ベースライン238日で枯渇<br>
+                                    ・50%輸入削減 (drainRate: 0.5): 約476日に延長<br>
+                                    ・節約モード (drainRate: 0.8): 消費20%減で約297日
+                                </div>
+                            </li>
+                            <li><i class="fas fa-gas-pump"></i>
+                                <div><strong>WTI原油価格リアルタイム表示</strong><br>FRED API経由でWTI原油価格を取得し表示（1時間キャッシュ）。</div>
+                            </li>
+                            <li><i class="fas fa-newspaper"></i>
+                                <div><strong>関連ニュース＆5chスレッド</strong><br>Yahoo/NHK/朝日のRSSフィードと5ch嫌儲板の石油関連スレッドを自動取得。勢いランキング算出でホットな話題を優先表示（5分キャッシュ）。</div>
+                            </li>
+                            <li><i class="fas fa-share-alt"></i>
+                                <div><strong>ソーシャルシェア</strong><br>X / LINE / Reddit へのワンクリック共有とClipboard APIによるコピー機能。280blocker回避のwindow.open方式を採用。</div>
+                            </li>
+                        </ul>
+
+                        <h4>Technical Highlights</h4>
+                        <ul class="feature-list">
+                            <li><strong>Frontend:</strong> Next.js 16 (静的エクスポート)、'use client'コンポーネント、KenmoFMとは独立したスタンドアロンレイアウト</li>
+                            <li><strong>Backend API:</strong> Flask (Python) — /api/oil-thread, /api/oil-price, /api/counter/timer の3エンドポイント</li>
+                            <li><strong>External APIs:</strong> FRED API (WTI原油価格)、5ch subject.txt (勢い計算)、RSS (Yahoo/NHK/朝日)</li>
+                            <li><strong>Visual Effects:</strong> CSSアニメーションによる油滴エフェクト、ネオンレッドのアクセントカラー、備蓄残量プログレスバー</li>
+                            <li><strong>SEO/OGP:</strong> og:image、Twitter Card (summary_large_image)、robots: index, follow</li>
+                        </ul>
+
+                        <h4>Live Demo</h4>
+                        <div class="project-links">
+                            <a href="https://kenmofm.org/timer/" target="_blank" class="link-btn homepage">
+                                <i class="fas fa-globe"></i> サイトを見る
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tags big-tags">
+                        <span>Next.js</span>
+                        <span>Flask</span>
+                        <span>Python</span>
+                        <span>FRED API</span>
+                        <span>RSS</span>
+                        <span>5ch Scraping</span>
                     </div>
                 </div>
             </div>
