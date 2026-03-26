@@ -192,16 +192,38 @@ nav {
     border-radius: 2px;
 }
 
-.featured-project {
-    padding: 50px;
-    transition: transform 0.3s ease, background 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Featured Card（KenmoFMなどメインプロジェクト用） */
+.featured-card {
+    grid-column: 1 / -1;
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    background: linear-gradient(135deg, rgba(0, 243, 255, 0.04), rgba(189, 0, 255, 0.04));
+    position: relative;
 }
 
-.featured-project:hover {
-    background: var(--card-hover-bg);
-    border-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+.featured-card:hover {
+    border-color: rgba(0, 243, 255, 0.5);
+    box-shadow: 0 15px 50px rgba(0, 243, 255, 0.2), 0 0 30px rgba(0, 243, 255, 0.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.featured-badge i {
+    font-size: 0.7rem;
 }
 
 .project-header {

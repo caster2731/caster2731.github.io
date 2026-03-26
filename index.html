@@ -46,108 +46,23 @@
 
             <section class="projects">
                 <h2 class="section-title fade-in delay-3">Projects</h2>
-                <div class="featured-project glass-panel fade-in delay-4">
-                    <div class="project-header">
-                        <div class="card-icon"><i class="fas fa-radio"></i></div>
-                        <h3>Kenmo FM</h3>
-                    </div>
-                    <div class="project-content">
-                        <p class="project-highlight">
-                            KenmoFMは、最新のAI技術とインターネット文化を融合させた、24時間365日稼働の自動ラジオ放送システムです。<br>
-                            5ちゃんねる（嫌儲板）の熱気あるスレッドから、古今の名作文学、そしてAIによる鋭いニュース解説まで、多彩なコンテンツを全自動でキュレーション・生成し、リスナーに届けます。
-                        </p>
-
-                        <div class="project-details">
-                            <h4>Concept</h4>
-                            <p>
-                                <strong>「インターネットの喧騒を、心地よいラジオへ」</strong><br>
-                                KenmoFMは、テキストベースのインターネット上の議論や情報を、聴覚的なエンターテインメントへと昇華させます。<br>
-                                Google Cloud TTS、Voicevox、Bert-VITS2などの高度な音声合成技術を駆使し、単なる読み上げを超えた「ラジオ番組」としての体験を提供します。
-                            </p>
-
-                            <h4>Key Features</h4>
-                            <ul class="feature-list">
-                                <li>
-                                    <i class="fas fa-comments"></i>
-                                    <div>
-                                        <strong>全自動スレッド読み上げ & ラジオ化</strong><br>
-                                        5ちゃんねる（嫌儲板）の勢いのあるスレッドをリアルタイムで取得。高性能フィルタリングと、時間帯に合わせたBGM/SE演出でプロのラジオのような聞き心地を実現。<br>
-                                        <small>定時の時報やジングル、そして「嫌儲十訓」の定期放送も。</small>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-newspaper"></i>
-                                    <div>
-                                        <strong>AIニュース解説・コメンタリー</strong><br>
-                                        Gemini API / NotebookLMを活用し、最新ニュースをAIが独自の視点で解説。AI
-                                        Duoモードによるキャラクター同時の掛け合いで、深みのある議論を展開します。
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-book-open"></i>
-                                    <div>
-                                        <strong>多彩な専門コーナー</strong><br>
-                                        深夜の「怪談コーナー」、情感豊かな「文学コーナー」、そしてAI DJが盛り上げる音楽放送「Musicthon」。
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-podcast"></i>
-                                    <div>
-                                        <strong>ポッドキャスト自動配信</strong><br>
-                                        放送されたコンテンツの一部は自動的にパッケージ化され、Apple PodcastsやSpotifyへ配信されます。
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <h4>Technical Highlights</h4>
-                            <ul class="feature-list">
-                                <li><strong>Multi-TTS Engine:</strong> Google Cloud TTS (Chirp3, Neural2), Voicevox,
-                                    Bert-VITS2 (実験的モデル)</li>
-                                <li><strong>Automated Mixing:</strong> FFmpegとPygameを駆使したリアルタイムかつ高品質な音声ミキシング</li>
-                                <li><strong>Expandability:</strong> 新しいコーナーを柔軟に追加できるプラグイン的アーキテクチャ</li>
-                            </ul>
-
-                            <h4>Vision</h4>
-                            <p>
-                                インターネットの「今」を切り取り、AIの力で再構築する。<br>
-                                KenmoFMは、作業用BGMとして、あるいは情報収集ツールとして、リスナーの生活に寄り添う新しいメディアの形を提案します。
-                            </p>
-
-                            <h4>On Air & Archives</h4>
-                            <div class="project-links">
-                                <a href="https://kenmofm.org" target="_blank" class="link-btn homepage">
-                                    <i class="fas fa-globe"></i> Official HP
-                                </a>
-                                <a href="https://www.youtube.com/@kenmofm2" target="_blank" class="link-btn youtube">
-                                    <i class="fab fa-youtube"></i> YouTube
-                                </a>
-                                <a href="https://podcasts.apple.com/jp/podcast/kenmofm-podcast/id1869841487"
-                                    target="_blank" class="link-btn apple">
-                                    <i class="fas fa-podcast"></i> Apple Podcasts
-                                </a>
-                                <a href="https://open.spotify.com/show/6GPejhAfmMvC5DOkWc6MN5?si=c3e08f183a954b03"
-                                    target="_blank" class="link-btn spotify">
-                                    <i class="fab fa-spotify"></i> Spotify
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="tags big-tags">
+                <div class="projects-grid fade-in delay-4">
+                    <!-- KenmoFM Featured Card（全幅） -->
+                    <div class="project-card featured-card glass-panel" onclick="openModal('kenmofm-modal')">
+                        <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+                        <div class="project-card-icon"><i class="fas fa-radio"></i></div>
+                        <h4>Kenmo FM</h4>
+                        <p>AI × インターネット文化を融合した、24時間365日稼働の全自動ラジオ放送システム</p>
+                        <div class="project-card-tags">
                             <span>Python</span>
                             <span>Gemini API</span>
-                            <span>NotebookLM</span>
                             <span>Voicevox</span>
                             <span>Google Cloud TTS</span>
-                            <span>Bert-VITS2</span>
-                            <span>FFmpeg</span>
                             <span>Icecast</span>
                         </div>
+                        <div class="project-card-arrow"><i class="fas fa-arrow-right"></i></div>
                     </div>
-                </div>
 
-                <!-- Other Projects Grid -->
-                <h3 class="other-projects-title fade-in delay-4">Other Projects</h3>
-                <div class="projects-grid fade-in delay-4">
                     <!-- Nginx Access Log Analyzer Card -->
                     <div class="project-card glass-panel" onclick="openModal('nginx-modal')">
                         <div class="project-card-icon"><i class="fas fa-chart-line"></i></div>
@@ -203,6 +118,108 @@
                 </div>
             </section>
         </main>
+
+        <!-- KenmoFM Modal -->
+        <div id="kenmofm-modal" class="modal-overlay" onclick="closeModal(event, 'kenmofm-modal')">
+            <div class="modal-content glass-panel" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal(event, 'kenmofm-modal')"><i
+                        class="fas fa-times"></i></button>
+                <div class="project-header">
+                    <div class="card-icon"><i class="fas fa-radio"></i></div>
+                    <h3>Kenmo FM</h3>
+                </div>
+                <div class="project-content">
+                    <p class="project-highlight">
+                        KenmoFMは、最新のAI技術とインターネット文化を融合させた、24時間365日稼働の自動ラジオ放送システムです。<br>
+                        5ちゃんねる（嫌儲板）の熱気あるスレッドから、古今の名作文学、そしてAIによる鋭いニュース解説まで、多彩なコンテンツを全自動でキュレーション・生成し、リスナーに届けます。
+                    </p>
+                    <div class="project-details">
+                        <h4>Concept</h4>
+                        <p>
+                            <strong>「インターネットの喧騒を、心地よいラジオへ」</strong><br>
+                            KenmoFMは、テキストベースのインターネット上の議論や情報を、聴覚的なエンターテインメントへと昇華させます。<br>
+                            Google Cloud TTS、Voicevox、Bert-VITS2などの高度な音声合成技術を駆使し、単なる読み上げを超えた「ラジオ番組」としての体験を提供します。
+                        </p>
+
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fas fa-comments"></i>
+                                <div>
+                                    <strong>全自動スレッド読み上げ & ラジオ化</strong><br>
+                                    5ちゃんねる（嫌儲板）の勢いのあるスレッドをリアルタイムで取得。高性能フィルタリングと、時間帯に合わせたBGM/SE演出でプロのラジオのような聞き心地を実現。<br>
+                                    <small>定時の時報やジングル、そして「嫌儲十訓」の定期放送も。</small>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-newspaper"></i>
+                                <div>
+                                    <strong>AIニュース解説・コメンタリー</strong><br>
+                                    Gemini API / NotebookLMを活用し、最新ニュースをAIが独自の視点で解説。AI
+                                    Duoモードによるキャラクター同時の掛け合いで、深みのある議論を展開します。
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-book-open"></i>
+                                <div>
+                                    <strong>多彩な専門コーナー</strong><br>
+                                    深夜の「怪談コーナー」、情感豊かな「文学コーナー」、そしてAI DJが盛り上げる音楽放送「Musicthon」。
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-podcast"></i>
+                                <div>
+                                    <strong>ポッドキャスト自動配信</strong><br>
+                                    放送されたコンテンツの一部は自動的にパッケージ化され、Apple PodcastsやSpotifyへ配信されます。
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h4>Technical Highlights</h4>
+                        <ul class="feature-list">
+                            <li><strong>Multi-TTS Engine:</strong> Google Cloud TTS (Chirp3, Neural2), Voicevox,
+                                Bert-VITS2 (実験的モデル)</li>
+                            <li><strong>Automated Mixing:</strong> FFmpegとPygameを駆使したリアルタイムかつ高品質な音声ミキシング</li>
+                            <li><strong>Expandability:</strong> 新しいコーナーを柔軟に追加できるプラグイン的アーキテクチャ</li>
+                        </ul>
+
+                        <h4>Vision</h4>
+                        <p>
+                            インターネットの「今」を切り取り、AIの力で再構築する。<br>
+                            KenmoFMは、作業用BGMとして、あるいは情報収集ツールとして、リスナーの生活に寄り添う新しいメディアの形を提案します。
+                        </p>
+
+                        <h4>On Air & Archives</h4>
+                        <div class="project-links">
+                            <a href="https://kenmofm.org" target="_blank" class="link-btn homepage">
+                                <i class="fas fa-globe"></i> Official HP
+                            </a>
+                            <a href="https://www.youtube.com/@kenmofm2" target="_blank" class="link-btn youtube">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                            <a href="https://podcasts.apple.com/jp/podcast/kenmofm-podcast/id1869841487"
+                                target="_blank" class="link-btn apple">
+                                <i class="fas fa-podcast"></i> Apple Podcasts
+                            </a>
+                            <a href="https://open.spotify.com/show/6GPejhAfmMvC5DOkWc6MN5?si=c3e08f183a954b03"
+                                target="_blank" class="link-btn spotify">
+                                <i class="fab fa-spotify"></i> Spotify
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tags big-tags">
+                        <span>Python</span>
+                        <span>Gemini API</span>
+                        <span>NotebookLM</span>
+                        <span>Voicevox</span>
+                        <span>Google Cloud TTS</span>
+                        <span>Bert-VITS2</span>
+                        <span>FFmpeg</span>
+                        <span>Icecast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Nginx Modal -->
         <div id="nginx-modal" class="modal-overlay" onclick="closeModal(event, 'nginx-modal')">
